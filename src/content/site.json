@@ -1,0 +1,28 @@
+{
+  "brand": "Gigabyte Alchemy",
+  "contactEndpoint": "https://api.gigabytefoundry.ai/contact",
+  "hero": {
+    "headlineA": "Edge AI,",
+    "headlineB": "practically built",
+    "tagline": "We design and ship edge-AI applications and the tooling that makes them deployable in the real world.",
+    "image": "/images/AlchemistLabWithTech.png"
+  },
+  "capabilities": [
+    {
+      "title": "Edge app prototyping",
+      "desc": "Swift and JS starters, audio pipelines, and UI scaffolds to ship fast."
+    },
+    {
+      "title": "Quantization & deploy",
+      "desc": "Tooling to shrink, optimize, and ship models across devices."
+    },
+    {
+      "title": "Docs & developer UX",
+      "desc": "Clear docs, examples, and SDKs—so teams can actually use it."
+    }
+  ],
+  "mission": "Turn powerful models into reliable, privacy-respecting products that run close to the user— with the shortest path from idea to value.",
+  "contact": {
+    "email": "hello@gigabytealchemy.ai"
+  }
+}

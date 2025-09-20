@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+import site from "../content/site.json";
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "";
+---
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+  <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+    <a href="/" class="font-semibold tracking-tight">{site.brand}</a>
+    <!-- ... -->
+  </div>
+</header>
+
+<!-- HERO with background from JSON -->
+<section
+  class="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
+  style={`background-image: url('${site.hero.image}');`}
+>
+  <div class="absolute inset-0 bg-slate-950/30"></div>
+  <div class="relative z-10 mx-auto max-w-6xl px-6 py-20 text-white">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+        {site.hero.headlineA}
+        <span class="bg-gradient-to-r from-emerald-300 to-indigo-300 bg-clip-text text-transparent">
+          {site.hero.headlineB}
+        </span>
+      </h1>
+      <p class="mt-4 text-lg/7 text-white/90 max-w-prose">{site.hero.tagline}</p>
+      <!-- buttons unchanged -->
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES from JSON -->
+<section id="capabilities" class="mx-auto max-w-6xl px-6 py-16">
+  <h2 class="text-2xl md:text-3xl font-semibold">What we do</h2>
+  <p class="mt-2 text-slate-600">A focused toolkit for getting models working at the edge, fast.</p>
+
+  <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {site.capabilities.map((c) => (
+      <div class="rounded-2xl border p-6 hover:shadow-sm transition">
+        <div class="h-10 w-10 rounded-lg bg-slate-900/5 flex items-center justify-center">
+          <!-- simple icon stays generic -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-slate-900/70" fill="none" viewBox="0 0 24 24" stroke-width="2">
+            <path d="M3 12h18M12 3v18" />
+          </svg>
+        </div>
+        <h3 class="mt-4 font-medium">{c.title}</h3>
+        <p class="mt-2 text-sm text-slate-600">{c.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="mx-auto max-w-6xl px-6 pb-8">
+  <div class="rounded-3xl border p-8 md:p-12 bg-gradient-to-br from-white to-slate-50">
+    <h2 class="text-2xl md:text-3xl font-semibold">Our mission</h2>
+    <p class="mt-3 text-slate-700 leading-relaxed">{site.mission}</p>
+  </div>
+</section>
+
+<!-- CONTACT uses contactEndpoint + email from JSON -->
+<section id="contact" class="mx-auto max-w-6xl px-6 py-16">
+  <div class="grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-semibold">Get in touch</h2>
+      <p class="mt-3 text-slate-600">Tell us about your use case. We’ll reply within 1–2 business days.</p>
+      <ul class="mt-6 space-y-2 text-slate-600">
+        <li><strong>Email:</strong> <a class="underline" href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>
+        <li><strong>Domain:</strong> gigabytefoundry.ai</li>
+      </ul>
+    </div>
+
+    <form method="POST" action={site.contactEndpoint} class="space-y-3">
+      <!-- ...existing fields... -->
+      {TURNSTILE_SITE_KEY && (<div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY}></div>)}
+      <button type="submit" class="rounded-xl bg-slate-900 px-5 py-3 font-medium text-white hover:bg-slate-800">Send message</button>
+      <p class="text-xs text-slate-500">Protected by Cloudflare Turnstile.</p>
+    </form>
+  </div>
+</section>
