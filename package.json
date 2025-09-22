@@ -5,5 +5,11 @@
   },
   "devDependencies": {
     "astro": "^5.13.8"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   }
 }
