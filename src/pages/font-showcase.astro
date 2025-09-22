@@ -1,0 +1,258 @@
+---
+// Font showcase page for development
+const fonts = [
+  // System fonts
+  { name: "System Default", family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" },
+  { name: "Arial", family: "Arial, sans-serif" },
+  { name: "Helvetica", family: "'Helvetica Neue', Helvetica, sans-serif" },
+  { name: "Times New Roman", family: "'Times New Roman', Times, serif" },
+  { name: "Georgia", family: "Georgia, serif" },
+  { name: "Verdana", family: "Verdana, sans-serif" },
+  { name: "Tahoma", family: "Tahoma, sans-serif" },
+  { name: "Trebuchet MS", family: "'Trebuchet MS', sans-serif" },
+  { name: "Courier New", family: "'Courier New', Courier, monospace" },
+  { name: "Monaco", family: "Monaco, monospace" },
+  { name: "Menlo", family: "Menlo, monospace" },
+
+  // Google Fonts - Popular choices
+  { name: "Playfair Display", family: "'Playfair Display', serif", import: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" },
+  { name: "Montserrat", family: "'Montserrat', sans-serif", import: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" },
+  { name: "Raleway", family: "'Raleway', sans-serif", import: "https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" },
+  { name: "Lato", family: "'Lato', sans-serif", import: "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" },
+  { name: "Roboto", family: "'Roboto', sans-serif", import: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" },
+  { name: "Open Sans", family: "'Open Sans', sans-serif", import: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" },
+  { name: "Source Sans Pro", family: "'Source Sans Pro', sans-serif", import: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" },
+  { name: "Poppins", family: "'Poppins', sans-serif", import: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" },
+  { name: "Inter", family: "'Inter', sans-serif", import: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" },
+  { name: "Nunito", family: "'Nunito', sans-serif", import: "https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" },
+
+  // Elegant/Professional
+  { name: "Cormorant Garamond", family: "'Cormorant Garamond', serif", import: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" },
+  { name: "Crimson Text", family: "'Crimson Text', serif", import: "https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" },
+  { name: "Libre Baskerville", family: "'Libre Baskerville', serif", import: "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" },
+  { name: "EB Garamond", family: "'EB Garamond', serif", import: "https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" },
+  { name: "Merriweather", family: "'Merriweather', serif", import: "https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" },
+  { name: "Lora", family: "'Lora', serif", import: "https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" },
+
+  // Tech/Modern
+  { name: "Space Grotesk", family: "'Space Grotesk', sans-serif", import: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" },
+  { name: "JetBrains Mono", family: "'JetBrains Mono', monospace", import: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" },
+  { name: "IBM Plex Sans", family: "'IBM Plex Sans', sans-serif", import: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" },
+  { name: "Fira Sans", family: "'Fira Sans', sans-serif", import: "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" },
+  { name: "Work Sans", family: "'Work Sans', sans-serif", import: "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" },
+  { name: "Outfit", family: "'Outfit', sans-serif", import: "https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" },
+  { name: "Sora", family: "'Sora', sans-serif", import: "https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" },
+  { name: "DM Sans", family: "'DM Sans', sans-serif", import: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" },
+
+  // Unique/Character
+  { name: "Bebas Neue", family: "'Bebas Neue', cursive", import: "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" },
+  { name: "Righteous", family: "'Righteous', cursive", import: "https://fonts.googleapis.com/css2?family=Righteous&display=swap" },
+  { name: "Orbitron", family: "'Orbitron', sans-serif", import: "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" },
+  { name: "Exo 2", family: "'Exo 2', sans-serif", import: "https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" },
+  { name: "Quicksand", family: "'Quicksand', sans-serif", import: "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" },
+  { name: "Comfortaa", family: "'Comfortaa', cursive", import: "https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" },
+
+  // Alchemical/Mystical feel
+  { name: "Cinzel", family: "'Cinzel', serif", import: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" },
+  { name: "Philosopher", family: "'Philosopher', sans-serif", import: "https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" },
+  { name: "Spectral", family: "'Spectral', serif", import: "https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" },
+  { name: "Forum", family: "'Forum', cursive", import: "https://fonts.googleapis.com/css2?family=Forum&display=swap" },
+  { name: "Marcellus", family: "'Marcellus', serif", import: "https://fonts.googleapis.com/css2?family=Marcellus&display=swap" },
+  { name: "Yrsa", family: "'Yrsa', serif", import: "https://fonts.googleapis.com/css2?family=Yrsa:wght@400;700&display=swap" },
+  { name: "Gilda Display", family: "'Gilda Display', serif", import: "https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" },
+];
+
+// Get unique imports
+const googleFontImports = [...new Set(fonts.filter(f => f.import).map(f => f.import))];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Showcase - Gigabyte Alchemy</title>
+
+  <!-- Import all Google Fonts -->
+  {googleFontImports.map(url => (
+    <link href={url} rel="stylesheet" />
+  ))}
+
+  <style>
+    body {
+      padding: 2rem;
+      background: #f8f9fa;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #333;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+    }
+    .font-item {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .font-item:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .font-display {
+      font-size: 2rem;
+      flex: 1;
+      color: #1a1a1a;
+    }
+    .font-name {
+      font-family: monospace;
+      font-size: 0.875rem;
+      color: #666;
+      min-width: 200px;
+      text-align: right;
+    }
+    .bold {
+      font-weight: 700;
+    }
+    .section-header {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background: #e9ecef;
+      border-left: 4px solid #6c757d;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 600;
+      color: #495057;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Font Showcase for Gigabyte Alchemy</h1>
+    <p style="margin-bottom: 2rem; color: #666;">Preview how "Gigabyte Alchemy" looks in different fonts. Each font shows both regular and bold weights.</p>
+
+    <div class="section-header">System Fonts</div>
+
+    {fonts.map((font) => {
+      // Add section headers
+      if (font.name === "Playfair Display") {
+        return (
+          <>
+            <div class="section-header">Google Fonts - Popular</div>
+            <div class="font-item">
+              <div class="font-display" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name}</div>
+            </div>
+            <div class="font-item">
+              <div class="font-display bold" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name} (Bold)</div>
+            </div>
+          </>
+        );
+      } else if (font.name === "Cormorant Garamond") {
+        return (
+          <>
+            <div class="section-header">Elegant & Professional</div>
+            <div class="font-item">
+              <div class="font-display" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name}</div>
+            </div>
+            <div class="font-item">
+              <div class="font-display bold" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name} (Bold)</div>
+            </div>
+          </>
+        );
+      } else if (font.name === "Space Grotesk") {
+        return (
+          <>
+            <div class="section-header">Tech & Modern</div>
+            <div class="font-item">
+              <div class="font-display" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name}</div>
+            </div>
+            <div class="font-item">
+              <div class="font-display bold" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name} (Bold)</div>
+            </div>
+          </>
+        );
+      } else if (font.name === "Bebas Neue") {
+        return (
+          <>
+            <div class="section-header">Unique & Character</div>
+            <div class="font-item">
+              <div class="font-display" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name}</div>
+            </div>
+            <div class="font-item">
+              <div class="font-display bold" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name} (Bold)</div>
+            </div>
+          </>
+        );
+      } else if (font.name === "Cinzel") {
+        return (
+          <>
+            <div class="section-header">Alchemical & Mystical</div>
+            <div class="font-item">
+              <div class="font-display" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name}</div>
+            </div>
+            <div class="font-item">
+              <div class="font-display bold" style={`font-family: ${font.family};`}>
+                Gigabyte Alchemy
+              </div>
+              <div class="font-name">{font.name} (Bold)</div>
+            </div>
+          </>
+        );
+      }
+
+      // Regular font items
+      return (
+        <>
+          <div class="font-item">
+            <div class="font-display" style={`font-family: ${font.family};`}>
+              Gigabyte Alchemy
+            </div>
+            <div class="font-name">{font.name}</div>
+          </div>
+          <div class="font-item">
+            <div class="font-display bold" style={`font-family: ${font.family};`}>
+              Gigabyte Alchemy
+            </div>
+            <div class="font-name">{font.name} (Bold)</div>
+          </div>
+        </>
+      );
+    })}
+  </div>
+</body>
+</html>

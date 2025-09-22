@@ -2,26 +2,32 @@
   "brand": "Gigabyte Alchemy",
   "contactEndpoint": "https://api.gigabytefoundry.ai/contact",
   "hero": {
-    "headlineA": "Edge AI,",
-    "headlineB": "practically built",
-    "tagline": "We design and ship edge-AI applications and the tooling that makes them deployable in the real world.",
+    "headline": "Artificial Wisdom at the Edge",
+    "tagline": "Thoughtful AI. Human-centered. Your data remains with you.",
+    "subheadline": "We craft privacy-first applications and tools that run locally and feel alive — intelligent technology that empowers reflection, creativity, and connection.",
     "image": "/images/AlchemistLabWithTech.png"
   },
-  "capabilities": [
-    {
-      "title": "Edge app prototyping",
-      "desc": "Swift and JS starters, audio pipelines, and UI scaffolds to ship fast."
-    },
-    {
-      "title": "Quantization & deploy",
-      "desc": "Tooling to shrink, optimize, and ship models across devices."
-    },
-    {
-      "title": "Docs & developer UX",
-      "desc": "Clear docs, examples, and SDKs—so teams can actually use it."
-    }
-  ],
-  "mission": "Turn powerful models into reliable, privacy-respecting products that run close to the user— with the shortest path from idea to value.",
+  "about": {
+    "title": "A Studio for Quiet, Powerful AI Technology",
+    "content": "At Gigabyte Alchemy, we use cutting-edge AI to build human-first tools and experiences. Our focus is edge-native, privacy-respecting, and emotionally intelligent design.",
+    "detail": "From journaling apps to community tools, everything we make shares one core principle: technology should serve, not detract.",
+    "closing": "We work at the intersection of cutting-edge engineering and thoughtful design — blending technical excellence with human-first design."
+  },
+  "philosophy": {
+    "title": "Artificial Wisdom, Not Just Intelligence",
+    "intro": "We believe in a new category of technology — one that combines performance with presence.",
+    "definition": "Artificial Wisdom means building tools that:",
+    "principles": [
+      "Run locally, respecting both your privacy and your pace",
+      "Are emotionally aware",
+      "Support focus, clarity, and growth"
+    ],
+    "closing": "We are not trying to build AGI. We build AWE — Artificial Wisdom at the Edge. Thoughtful, grounded technology that creates space to be you."
+  },
+  "footer": {
+    "newsletter": "Join our mailing list to find out more.",
+    "copyright": "© Gigabyte Alchemy 2025"
+  },
   "contact": {
     "email": "hello@gigabytealchemy.ai"
   }
